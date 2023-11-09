@@ -1,22 +1,23 @@
 export default function Square() {
   return (
-    //Left off step before 123
-    //                     456
-    //                     789
     <>
-      <button className="square">X</button>
-      <button className="square">X</button>
+      <div class = "board_row">
+        <button className="square">1</button>
+        <button className="square">2</button>
+        <button className="square">3</button>
+      </div>
 
-      <button className="square">X</button>
-      <button className="square">X</button>
-
-      <button className="square">X</button>
-      <button className="square">X</button>
-
-      <button className="square">X</button>
-      <button className="square">X</button>
-
-      <button className="square">X</button>
+      <div class = "board_row">
+        <button className="square">4</button>
+        <button className="square">5</button>
+        <button className="square">6</button>
+      </div>
+      
+      <div class = "board_row">
+        <button className="square">7</button>
+        <button className="square">8</button>
+        <button className="square">9</button>
+      </div>
       
     </>
 
