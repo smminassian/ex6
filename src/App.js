@@ -1,30 +1,27 @@
-
-function Square(){
-  return <button className="square">1</button>
+function Square() {
+  return <button className="square">1</button>;
 }
 
 export default function Board() {
   return (
     <>
-      <div class = "board-row">
-       <Square />
-       <Square />
-       <Square />
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
       </div>
 
-      <div class = "board-row">
+      <div className="board-row">
         <Square />
         <Square />
         <Square />
       </div>
-      
-      <div class = "board-row">
+
+      <div className="board-row">
         <Square />
         <Square />
         <Square />
       </div>
-      
     </>
-
   );
 }
