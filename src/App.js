@@ -9,8 +9,7 @@ export default function Board() {
         <Square />
         <Square />
         <Square />
-      </div>
-
+      </div
       <div className="board-row">
         <Square />
         <Square />
