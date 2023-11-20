@@ -5,5 +5,8 @@
     "react-scripts": "^5.0.0"
   },
   "main": "/index.js",
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/react-dom": "^18.2.15",
+    "eslint": "^8.54.0"
+  }
 }
