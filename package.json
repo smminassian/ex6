@@ -10,7 +10,7 @@
     "eslint": "^8.54.0"
   },
   "name": "vy6j3f",
-  "description": null,
+  "description": "null",
   "version": "0.0.0",
   "scripts": {
     "start": "react-scripts start",
@@ -18,11 +18,14 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-"eslintConfig": {
- "extends": [
-   "react-app/jest"
- ]
-},
+
+
+   "eslintConfig": {
+    "extends": [
+      "react-app/jest"
+    ]
+  },
+
   "browserslist": {
     "production": [
       ">0.2%",
