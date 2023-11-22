@@ -43,6 +43,7 @@ export default function Board() {
       </div>
     </>
   );
+  //hi
 }
 
 function calculateWinner(squares) {
@@ -64,5 +65,4 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
-//where u left off is in your photos on your phone. 
+//hi
