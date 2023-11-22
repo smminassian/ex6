@@ -65,4 +65,3 @@ function calculateWinner(squares) {
   }
   return null;
 }
-//hi
