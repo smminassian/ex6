@@ -10,7 +10,11 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i){
+<<<<<<< HEAD
     if(squares[i] || calculateWinner(squares)){
+=======
+    if(squares[i]){
+>>>>>>> b1c9ecd8818b3de1580e31a2344fc073f55c477e
       return;
     }
     const nextSquares = squares.slice();
