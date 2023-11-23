@@ -53,10 +53,6 @@ function Board({ xIsNext, squares, onPlay }) {
   );
 }
 
-function Panel(){
-
-}
-
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
@@ -116,23 +112,30 @@ function calculateWinner(squares) {
   return null;
 }
 
-
 function calcSquare(){
   return (
-    <button className='Square' onClick={calcCLick}>
+    <button className='numberBox' onClick={calcCLick}>
       {value}
       </button>
   )
 }
 function calcCLear(){
   return(
-    <button className = 'Square' onClick={Clear}>
-      {value}
-      </button>
+    <button className = 'clear' onClick={Clear}></button>
   )
 }
 
-function gamePanel(){
+function gamePanel({numberBox}){
+  function appendFunction(){
+
+
+  }
+  function click(i){
+   for( i = 0; i<)
+
+
+  }
+  
   return(
     <>
     <div className='board-row'>
@@ -154,7 +157,7 @@ function gamePanel(){
       <calcSquare value = "x" />
     </div>
     <div className='board-row'>
-      <calcClear value = "c"/>
+      <calcCLear value = "c"/>
       <calcSquare value="0" />
       <calcSquare value="=" />
       <calcSquare value = "/" />
@@ -162,4 +165,14 @@ function gamePanel(){
   </>
   );
   
+}
+
+function calculator(){
+  return(
+    <div className='outer'>
+      <input type = "text" id = "inputBox"/>
+      <br/>
+        <gamePanel />
+      </div>
+  )
 }

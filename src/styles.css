@@ -88,3 +88,18 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+/*calculator css */
+.outer {
+  width: 200px;
+  height: 100px;
+  border: solid;
+  background-color: gray;
+  padding: 10px;
+}
+
+input {
+  width: 200px;
+  border: solid;
+}
+
