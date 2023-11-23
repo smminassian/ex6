@@ -7,6 +7,7 @@ function Square({ value, onSquareClick }) {
     </button>
   );
 }
+
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) {
@@ -50,6 +51,10 @@ function Board({ xIsNext, squares, onPlay }) {
       </div>
     </>
   );
+}
+
+function Panel(){
+
 }
 
 export default function Game() {
@@ -111,4 +116,50 @@ function calculateWinner(squares) {
   return null;
 }
 
- 
+
+function calcSquare(){
+  return (
+    <button className='Square' onClick={calcCLick}>
+      {value}
+      </button>
+  )
+}
+function calcCLear(){
+  return(
+    <button className = 'Square' onClick={Clear}>
+      {value}
+      </button>
+  )
+}
+
+function gamePanel(){
+  return(
+    <>
+    <div className='board-row'>
+      <calcSquare value = "7"/>
+      <calcSquare value="8" />
+      <calcSquare value="9" />
+      <calcSquare value = "+" />
+    </div>
+    <div className='board-row'>
+      <calcSquare value = "4"/>
+      <calcSquare value="5" />
+      <calcSquare value="6" />
+      <calcSquare value = "-" />
+    </div>
+    <div className='board-row'>
+      <calcSquare value = "1"/>
+      <calcSquare value="2" />
+      <calcSquare value="3" />
+      <calcSquare value = "x" />
+    </div>
+    <div className='board-row'>
+      <calcClear value = "c"/>
+      <calcSquare value="0" />
+      <calcSquare value="=" />
+      <calcSquare value = "/" />
+    </div>
+  </>
+  );
+  
+}
