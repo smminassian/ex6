@@ -3,8 +3,20 @@ import { useState } from "react";
 function Square({ value, onSquareClick }) {
   return <button className="square" onClick={onSquareClick}>{value}</button>;
 }
+export default function Game(){
+  return(
+    <div className="game">
+      <div className="game-board">
+        <Board />
+        </div>
+        <div className="game-info">
+          <ol>{/*TODO*/}</ol>
+      </div>
+    </div>
+  );
+}
 
-export default function Board() {
+function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
