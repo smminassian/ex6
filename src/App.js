@@ -3,7 +3,6 @@ import { useState } from "react";
 function Square({ value, onSquareClick }) {
   return <button className="square" onClick={onSquareClick}>{value}</button>;
 }
-//check phone to see where u left off in tutorial. I took a picture!
 
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
