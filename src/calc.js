@@ -1,3 +1,4 @@
+import {useState} from 'react';
 
 class calculator{
       
@@ -85,7 +86,7 @@ class calculator{
   
     const calc = new calculator();
   
-    function calcSquare(value, squareClick){
+    function CalcSquare(value, squareClick){
       return (
         <button className='numberBox' onClick={squareClick}>
           {value}
@@ -94,8 +95,10 @@ class calculator{
     }
   
     export default function gamePanel(){
+      const[calcSquares, setCalcSquares] = useState(Array(9).fill(null));
         function click(i){
           for(i = 0; i < 999; i++){
+            calcSquares[i];
             calc.append(i);
             calc.myAppendFunction(i);
             calc.Operation(i);
@@ -107,33 +110,29 @@ class calculator{
       }
         return(
           <>
-          <div className='board-row'>
-            <calcSquare className = "number" value='7' squareClick={()=> click(7)}/>
-            <calcSquare className = "number" value='8' squareClick = {()=> click(8)}/>
-            <calcSquare className = "number" value='9' squareClick = {()=> click(9)}/>
-            <calcSquare className = "operation" value='+' squareClick = {()=> click('+')}/>
-          </div>
-          <div className='board-row'>
-            <calcSquare className = "number" value='4' squareClick = {()=> click(4)}/>
-            <calcSquare className = "number" value='5' squareClick = {()=> click(5)}/>
-            <calcSquare className = "number" value='6' squareClick = {()=> click(6)}/>
-            <calcSquare className = "operation" value='-' squareClick = {()=> click('-')}/>
-          </div>
-          <div className='board-row'>
-            <calcSquare className = "number" value='1' squareClick = {()=> click(1)}/>
-            <calcSquare className = "number" value='2' squareClick = {()=> click(2)}/>
-            <calcSquare className = "number" value='3' squareClick = {()=> click(3)}/>
-            <calcSquare className = "operation" value= 'X' squareClick = {()=> click('*')}/>
-          </div>
-          <div className='board-row'>
-            <calcSquare className = "clear" value= 'c' squareClick = {() => click('c')}/>
-            <calcSquare className = "number" value='0' squareClick = {()=> click(0)}/>
-            <calcSquare className = "Operation" value='=' squareClick = {()=> click('=')}/>
-            <calcSquare className = "Operation" value='/' squareClick = {()=> click('/')}/>
+          <div className= 'outer'>
+            <CalcSquare value={calcSquares[7]} squareClick={()=> click(7)}/>
+            <CalcSquare value={calcSquares[8]} squareClick = {()=> click(8)}/>
+            <CalcSquare  value={calcSquares[9]} squareClick = {()=> click(9)}/>
+            <CalcSquare  value={calcSquares['+']} squareClick = {()=> click('+')}/>
+            <br/>
+            <CalcSquare value={calcSquares[4]} squareClick = {()=> click(4)}/>
+            <CalcSquare value={calcSquares[5]} squareClick = {()=> click(5)}/>
+            <CalcSquare value={calcSquares[6]} squareClick = {()=> click(6)}/>
+            <CalcSquare value={calcSquares['-']} squareClick = {()=> click('-')}/>
+            <br/>
+            <CalcSquare value={calcSquares[1]} squareClick = {()=> click(1)}/>
+            <CalcSquare value={calcSquares[2]} squareClick = {()=> click(2)}/>
+            <CalcSquare value={calcSquares[3]} squareClick = {()=> click(3)}/>
+            <CalcSquare value= {calcSquares=['x']} squareClick = {()=> click('*')}/>
+            <br/>
+            <CalcSquare value= {calcSquares['c']} squareClick = {() => click('c')}/>
+            <CalcSquare value={calcSquares[0]} squareClick = {()=> click(0)}/>
+            <CalcSquare value={calcSquares['=']} squareClick = {()=> click('=')}/>
+            <CalcSquare  value= {calcSquares['/']} squareClick = {()=> click('/')}/>
           </div>
         </>
         );
-      
     }
   
   
