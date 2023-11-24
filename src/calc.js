@@ -94,7 +94,7 @@ class calculator{
       )
     }
   
-  function gamePanel(){
+  function gamePanel(){ //This is the panel of calc
       const[calcSquares, setCalcSquares] = useState(Array(9).fill(null));
         function click(i){
             const squareArray = calcSquares.slice();
@@ -138,7 +138,7 @@ class calculator{
         );
     }
     
-    export  default function main(){
+    export default function main(){ //this is the main function
 
       return(
         <div className='outer'>
