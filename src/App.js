@@ -198,15 +198,22 @@ class calculator{
 
   const calc = new calculator();
 
-  function gamePanel({numberBox, squareClick}){
+  function calcSquare(value, squareClick){
+    return (
+      <button className='numberBox' onClick={squareClick}>
+        {value}
+        </button>
+    )
+  }
+
+  function gamePanel({numberBox}){
       function click(i){
         for(i = 0; i < 999; i++){
           calc.append(i);
           calc.myAppendFunction(i);
-        }
-    
-    
+          calc.Operation(i);
       }
+    }
       return(
         <>
         <div className='board-row'>
@@ -228,24 +235,14 @@ class calculator{
           <calcSquare className = "operation" value= 'X' squareClick = {()=> click('*')}/>
         </div>
         <div className='board-row'>
-          <calcSquare className = "clear" value= 'c' squareClick = {calc.clear}/>
+          <calcSquare className = "clear" value= 'c' squareClick = {() => click(calc.clear)}/>
           <calcSquare className = "number" value='0' squareClick = {()=> click(0)}/>
           <calcSquare className = "Operation" value='=' squareClick = {()=> click('=')}/>
           <calcSquare className = "Operation" value='/' squareClick = {()=> click('/')}/>
         </div>
       </>
       );
-    }  
+    
+  }
 
-function calcSquare(value, squareClick){
-  return (
-    <button className='numberBox' onClick={squareClick}>
-      {value}
-      </button>
-  )
-}
-function calcCLear(){
-  return(
-    <button className = 'clear' onClick={Clear}></button>
-  )
-}
+
