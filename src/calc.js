@@ -1,3 +1,4 @@
+
 class calculator{
       
     constructor(){
@@ -92,7 +93,7 @@ class calculator{
       )
     }
   
-    function gamePanel(){
+    export default function gamePanel(){
         function click(i){
           for(i = 0; i < 999; i++){
             calc.append(i);
