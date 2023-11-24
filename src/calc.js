@@ -94,27 +94,31 @@ class calculator{
       )
     }
   
-    export default function gamePanel(){
+  function gamePanel(){
       const[calcSquares, setCalcSquares] = useState(Array(9).fill(null));
         function click(i){
-          for(i = 0; i < 999; i++){
-            calcSquares[i];
-            calc.append(i);
-            calc.myAppendFunction(i);
-            calc.Operation(i);
-          if(i === 'c'){
-            calc.clear();
-            calc.setClear();
+            const squareArray = calcSquares.slice();
+            for(i = 0; i< squareArray.length; i++){
+              calc.append(i);
+              calc.myAppendFunction(i);
+              calc.Operation(i);
+            if(i === 'c'){
+              calc.clear();
+              calc.setClear();
+            }
           }
-        }
+          //I am getting an error where it says "Objects are not valid as a react child". It has to do with the jsx in calcSquares. 
+          //Ill figure out how to fix it. We are almost finished with 2 of the react components. 
+          //I just have to get the buttons to show up on the calculator and they need to work
+          
+        
       }
         return(
           <>
-          <div className= 'outer'>
             <CalcSquare value={calcSquares[7]} squareClick={()=> click(7)}/>
             <CalcSquare value={calcSquares[8]} squareClick = {()=> click(8)}/>
-            <CalcSquare  value={calcSquares[9]} squareClick = {()=> click(9)}/>
-            <CalcSquare  value={calcSquares['+']} squareClick = {()=> click('+')}/>
+            <CalcSquare value={calcSquares[9]} squareClick = {()=> click(9)}/>
+            <CalcSquare value={calcSquares['+']} squareClick = {()=> click('+')}/>
             <br/>
             <CalcSquare value={calcSquares[4]} squareClick = {()=> click(4)}/>
             <CalcSquare value={calcSquares[5]} squareClick = {()=> click(5)}/>
@@ -124,16 +128,24 @@ class calculator{
             <CalcSquare value={calcSquares[1]} squareClick = {()=> click(1)}/>
             <CalcSquare value={calcSquares[2]} squareClick = {()=> click(2)}/>
             <CalcSquare value={calcSquares[3]} squareClick = {()=> click(3)}/>
-            <CalcSquare value= {calcSquares=['x']} squareClick = {()=> click('*')}/>
+            <CalcSquare value= {calcSquares['x']} squareClick = {()=> click('*')}/>
             <br/>
             <CalcSquare value= {calcSquares['c']} squareClick = {() => click('c')}/>
             <CalcSquare value={calcSquares[0]} squareClick = {()=> click(0)}/>
             <CalcSquare value={calcSquares['=']} squareClick = {()=> click('=')}/>
             <CalcSquare  value= {calcSquares['/']} squareClick = {()=> click('/')}/>
-          </div>
         </>
         );
     }
-  
+    
+    export  default function main(){
+
+      return(
+        <div className='outer'>
+          <input type = "text" className='inputBox'/>
+            <gamePanel/>
+        </div>
+      )
+    }
   
   

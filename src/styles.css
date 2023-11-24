@@ -90,8 +90,8 @@ body {
 }
 
 .outer {
-  width: 200px;
-  height: 100px;
+  width: 224.8px;
+  height: 124.8px;
   border: solid;
   background-color: gray;
   padding: 10px;
@@ -100,11 +100,6 @@ body {
 input {
   width: 200px;
   border: solid;
-}
-.row{
-  width: 102.7;
-  height: 33;
-  border:solid;
 }
 .numberBox{
   background: #fff;
